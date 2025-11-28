@@ -96,11 +96,11 @@ Para estrellas de 2 M☉, el tiempo en MS es ~1 Gyr.
 **Respuesta:** **No directamente**, debido a la **degeneración edad-metalicidad**. 
 
 - El cúmulo con MSTO azul (0.5) podría ser:
-  - Joven y rico en metales, O
+  - Joven y rico en metales, o
   - Viejo y pobre en metales
 
 - El cúmulo con MSTO rojo (0.7) podría ser:
-  - Viejo y rico en metales, O
+  - Viejo y rico en metales, o
   - Aún más viejo y de metalicidad intermedia
 
 Se necesita información adicional (espectroscopía, forma de la RGB, posición del RC) para romper la degeneración.
@@ -205,17 +205,29 @@ La IMF de Salpeter: $\xi(M) = A \cdot M^{-2.35}$
 1. **Normalización por masa total:**
 $$M_\mathrm{tot} = \int_{0.1}^{100} M \cdot \xi(M) \, dM = A \int_{0.1}^{100} M^{-1.35} \, dM$$
 
-$$M_\mathrm{tot} = A \left[\frac{M^{-0.35}}{-0.35}\right]_{0.1}^{100} = A \times 7.92$$
+$$M_\mathrm{tot} = A \left[\frac{M^{-0.35}}{-0.35}\right]_{0.1}^{100}$$
 
-Para $M_\mathrm{tot} = 10^4\, M_\odot$: $A = 1263$
+Evaluando: $\frac{100^{-0.35} - 0.1^{-0.35}}{-0.35} = \frac{0.224 - 2.24}{-0.35} = \frac{-2.016}{-0.35} = 5.76$
+
+Entonces: $M_\mathrm{tot} = A \times 5.76$
+
+Para $M_\mathrm{tot} = 10^4\, M_\odot$: $A = 10^4 / 5.76 = 1736$
 
 2. **Número total de estrellas:**
 $$N = \int_{0.1}^{100} \xi(M) \, dM = A \int_{0.1}^{100} M^{-2.35} \, dM$$
 
-$$N = A \left[\frac{M^{-1.35}}{-1.35}\right]_{0.1}^{100} = A \times 16.5 \approx 20,800 \text{ estrellas}$$
+$$N = A \left[\frac{M^{-1.35}}{-1.35}\right]_{0.1}^{100}$$
+
+Evaluando: $\frac{100^{-1.35} - 0.1^{-1.35}}{-1.35} = \frac{0.002 - 22.4}{-1.35} = \frac{-22.4}{-1.35} = 16.6$
+
+Entonces: $N = A \times 16.6 = 1736 \times 16.6 \approx 28,800 \text{ estrellas}$
 
 3. **Estrellas masivas (M > 8 M☉):**
-$$N_{>8} = A \int_{8}^{100} M^{-2.35} \, dM \approx A \times 0.052 \approx 66 \text{ estrellas}$$
+$$N_{>8} = A \int_{8}^{100} M^{-2.35} \, dM$$
+
+Evaluando: $\frac{100^{-1.35} - 8^{-1.35}}{-1.35} = \frac{0.002 - 0.063}{-1.35} = 0.045$
+
+Entonces: $N_{>8} = 1736 \times 0.045 \approx 78 \text{ estrellas}$
 
 **Conclusión:** Solo ~0.3% de las estrellas tienen masa suficiente para explotar como supernova.
 
